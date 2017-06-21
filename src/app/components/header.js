@@ -8,10 +8,11 @@ const HeaderDirective = () => {
 
 class HeaderController {
   constructor() {
+    this.brand = 'Angular Webpack';
   }
 
   alert() {
-    alert('Yahoo')
+    alert('Clicked Submit')
   }
 }
 
