@@ -1,4 +1,6 @@
 /* styles in src/style directory are applied to the whole page */
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.min.css');
+
 body {
   background: #0147A7;
   color: #fff;
@@ -14,6 +16,10 @@ main {
   text-align: center;
   margin-top: 50px;
   display: block;
+}
+
+.navbar {
+  border-radius: 0;
 }
 
 footer {
