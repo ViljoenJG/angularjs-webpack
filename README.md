@@ -20,10 +20,7 @@ What you need to run this app:
 
 ## Running the app
 
-After you have installed all dependencies you can now run the app with:
-```bash
-npm start
-```
+After you have installed all dependencies you can now run the app with `npm start`:
 
 It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
 
