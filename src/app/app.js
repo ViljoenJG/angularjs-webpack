@@ -1,8 +1,4 @@
-import angular from 'angular';
-
-import '../style/app.css';
-
-let app = () => {
+let AppDirective = () => {
   return {
     template: require('./app.html'),
     controller: 'AppCtrl',
@@ -16,10 +12,9 @@ class AppCtrl {
   }
 }
 
-const MODULE_NAME = 'app';
+const app = {
+  AppDirective,
+  AppCtrl
+}
 
-angular.module(MODULE_NAME, [])
-  .directive('app', app)
-  .controller('AppCtrl', AppCtrl);
-
-export default MODULE_NAME;
+export default app;
