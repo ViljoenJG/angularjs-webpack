@@ -4,6 +4,6 @@ import AppComponent from './app/app.js'
 const components = {
   HeaderComponent,
   AppComponent
-}
+};
 
 export default components;

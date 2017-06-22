@@ -1,6 +1,7 @@
+// Require modules for bundling with Webpack
+require('jquery');
+require('bootstrap');
 import angular from 'angular';
-import jquery from 'jquery';
-import bootstrap from 'bootstrap';
 
 import '../style/app.css';
 

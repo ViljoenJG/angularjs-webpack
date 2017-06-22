@@ -11,8 +11,8 @@ function Routing($routeProvider, $locationProvider) {
       controllerAs: 'ctrl',
       template: require('./views/home.html')
     })
-};
+}
 
-Routing.$inject = ['$routeProvider', '$locationProvider']
+Routing.$inject = ['$routeProvider', '$locationProvider'];
 
 export default Routing;
