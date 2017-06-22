@@ -3,15 +3,24 @@ import jquery from 'jquery';
 import bootstrap from 'bootstrap';
 
 import '../style/app.css';
-import header from './components/header.js';
-import app from './app.js';
 
-const MODULE_NAME = 'app'
+import routing from './app.routing.js';
+import { HomeCtrl } from './controllers';
+import { HeaderComponent, AppComponent } from './components';
 
-angular.module(MODULE_NAME, [])
-  .directive('app', app.AppDirective)
-  .controller('AppCtrl', app.AppCtrl)
-  .directive('header', header.HeaderDirective)
-  .controller('HeaderController', header.HeaderController);
+// Use variable for appName so it still works after minifying
+const MODULE_NAME = 'app';
 
-export default MODULE_NAME;
+let app =  angular.module(MODULE_NAME, [
+  require('angular-resource'),
+  require('angular-animate'),
+  require('angular-route')
+])
+.config(routing)
+.controller('HomeCtrl', HomeCtrl)
+.component('header', HeaderComponent)
+.component('app', AppComponent);
+
+module.exports = {
+  app
+}
