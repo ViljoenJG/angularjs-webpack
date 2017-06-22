@@ -5,22 +5,19 @@ import bootstrap from 'bootstrap';
 import '../style/app.css';
 
 import routing from './app.routing.js';
-import { HomeCtrl } from './controllers';
-import { HeaderComponent, AppComponent } from './components';
+import controllers from './controllers';
+import components from './components';
 
-// Use variable for appName so it still works after minifying
 const MODULE_NAME = 'app';
 
-let app =  angular.module(MODULE_NAME, [
-  require('angular-resource'),
+angular.module(MODULE_NAME, [
+  require('angular-route'),
   require('angular-animate'),
-  require('angular-route')
+  require('angular-resource')
 ])
 .config(routing)
-.controller('HomeCtrl', HomeCtrl)
-.component('header', HeaderComponent)
-.component('app', AppComponent);
+.controller('HomeCtrl', controllers.HomeCtrl)
+.component('header', components.HeaderComponent)
+.component('app', components.AppComponent);
 
-module.exports = {
-  app
-}
+export default MODULE_NAME;

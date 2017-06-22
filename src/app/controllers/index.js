@@ -1,7 +1,7 @@
-import { HomeCtrl } from './home.js'
+import HomeCtrl from './home.js'
 
 const controllers = {
   HomeCtrl
 }
 
-module.exports = controllers;
+export default controllers
