@@ -1,10 +1,8 @@
-class HeaderController {
-  constructor() {
-    this.brand = 'Angular Webpack';
-  }
-
-  alert() {
-    alert('Clicked Submit')
+function HeaderController() {
+  this.brand = 'Angular Webpack';
+  
+  this.alert = () => {
+    alert('Clicked Submit');
   }
 }
 
