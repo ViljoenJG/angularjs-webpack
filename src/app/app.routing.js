@@ -1,3 +1,4 @@
+/* @ngInject */
 function Routing($routeProvider, $locationProvider) {
   $locationProvider
       .html5Mode({
@@ -12,7 +13,5 @@ function Routing($routeProvider, $locationProvider) {
       template: require('./views/home.html')
     })
 }
-
-Routing.$inject = ['$routeProvider', '$locationProvider'];
 
 export default Routing;
